@@ -32,6 +32,7 @@ LABEL summary="$SUMMARY" \
 EXPOSE 8080
 EXPOSE 8443
 
+RUN echo "---> installing dependencies..."
 RUN yum install -y yum-utils && \
     yum install -y centos-release-scl epel-release && \
     INSTALL_PKGS="gettext hostname nss_wrapper bind-utils httpd24 httpd24-mod_ssl" && \
